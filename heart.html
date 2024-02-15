@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trôn Việt Nam</title>
+  <style>
+    body {
+      text-align: center;
+      font-size: 24px;
+      padding: 50px;
+    }
+    #textContainer {
+      display: inline-block;
+    }
+  </style>
+</head>
+<body>
+
+<div id="textContainer">Chờ một chút...</div>
+
+<script>
+  const textContainer = document.getElementById('textContainer');
+  const textArray = [
+    'Dành cho NgAnh...',
+    'Em cảm ơn vì đã luôn bơ em,',
+    'Đồng hành cùng với em suốt gần 3 năm qua',
+    'Nhân dịp va lung tung này',
+    'Em có món quà nho nhỏ dành tặng chị',
+    'Bé như virus Hepadnavirus',
+    ':)))'
+  ];
+  let currentIndex = 0;
+
+  function displayNextText() {
+    if (currentIndex < textArray.length) {
+      textContainer.textContent = textArray[currentIndex];
+      currentIndex++;
+
+      // Gọi lại hàm sau một khoảng thời gian
+      setTimeout(displayNextText, 2000); // 2000 milliseconds = 2 seconds
+    } else {
+      // Sau khi chạy hết dòng chữ, chuyển đến trang khác sau 2 giây
+      setTimeout(() => {
+        window.location.href = 'heart_.html'; // Thay đổi URL tương ứng
+      }, 2000);
+    }
+  }
+
+  // Bắt đầu chạy dòng chữ khi trang được tải
+  displayNextText();
+</script>
+
+</body>
+</html>
