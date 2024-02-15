@@ -20,7 +20,7 @@
     document.addEventListener("DOMContentLoaded", function () {
       setTimeout(function () {
         window.location.href = "https://www.facebook.com/skvuvms2";
-      }, 7000);
+      }, 26000);
     });
   </script>
 <body>
@@ -185,6 +185,46 @@
         if (s === 'complete' || s === 'loaded' || s === 'interactive') init();
         else document.addEventListener('DOMContentLoaded', init, false);
     </script>
+  
 </body>
 </html>
+<script>
+    function __nguyenhoanglong() {
+     nguyenhoanglongsound__();
+    }
+    const nguyenhoanglong_List = [
+  "https://files.catbox.moe/1byfaz.mp3",
+  "https://files.catbox.moe/1byfaz.mp3",
+  "https://files.catbox.moe/1byfaz.mp3",
+  "https://files.catbox.moe/1byfaz.mp3",
+  "https://files.catbox.moe/1byfaz.mp3",
+  "https://files.catbox.moe/1byfaz.mp3",
+  "https://files.catbox.moe/1byfaz.mp3",
+  "https://files.catbox.moe/1byfaz.mp3",
+  "https://files.catbox.moe/1byfaz.mp3",
+  "https://files.catbox.moe/1byfaz.mp3",
+  "https://files.catbox.moe/1byfaz.mp3",
+  "https://files.catbox.moe/1byfaz.mp3",
+  "https://files.catbox.moe/1byfaz.mp3",
+  "https://files.catbox.moe/1byfaz.mp3",
+  "https://files.catbox.moe/1byfaz.mp3",    
+  
+ 
+ 
+
+];
+//Random music
+let index = Math.floor(Math.random() * nguyenhoanglong_List.length);
+const audio = new Audio(nguyenhoanglong_List[index]);
+function nguyenhoanglongsound__() {
+ audio.play();
+}
+document.addEventListener("click", nguyenhoanglongsound__);
+audio.addEventListener("ended", function() {
+ index = (index + 1) % nguyenhoanglong_List.length;
+ audio.src = nguyenhoanglong_List[index];
+ audio.play();
+});
+
+   </script>
 
